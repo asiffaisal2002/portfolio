@@ -222,11 +222,11 @@ function App() {
           <div className="mb-4 text-center">
             <p className="text-secondary mb-3">Feel free to reach out for collaborations or just a friendly hello!</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'center', margin: '1rem 0' }}>
-              <a href={`mailto:${personalInfo.email}`} className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${personalInfo.email}`} target="_blank" rel="noreferrer" className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                 {personalInfo.email}
               </a>
               {personalInfo.phone && (
-                <a href={`tel:${personalInfo.phone}`} className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+                <a href={`https://wa.me/91${personalInfo.phone.replace(/\\D/g, '')}`} target="_blank" rel="noreferrer" className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                   {personalInfo.phone}
                 </a>
               )}
